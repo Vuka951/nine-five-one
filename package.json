@@ -1,12 +1,36 @@
 {
   "name": "nine-five-one",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "node dist/test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "keywords": [
+    "vuka",
+    "951",
+    "sacred"
+  ],
+  "author": "Vuka",
+  "license": "MIT",
+  "description": "The ultimate package that handles anything and everything related to the sacred number 951",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vuka951/nine-five-one.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vuka951/nine-five-one/issues"
+  },
+  "homepage": "https://github.com/Vuka951/nine-five-one#readme",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "typescript": "^5.6.3"
+  }
 }
