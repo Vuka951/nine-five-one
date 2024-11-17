@@ -1,8 +1,8 @@
-import tsParser from '@typescript-eslint/parser';
-import tsPlugin from '@typescript-eslint/eslint-plugin';
-import prettierPlugin from 'eslint-plugin-prettier';
+const tsParser = require('@typescript-eslint/parser');
+const tsPlugin = require('@typescript-eslint/eslint-plugin');
+const prettierPlugin = require('eslint-plugin-prettier');
 
-export default [
+module.exports = [
   {
     ignores: ['node_modules', 'dist'], // Files or directories to ignore
     files: ['**/*.ts'],
