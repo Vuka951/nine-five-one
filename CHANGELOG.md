@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2024-11-17
+### Added
+- Offical Clean V1 with nice setup
+
+
+
 - Add TS
 - Add lint
 - Add tests
