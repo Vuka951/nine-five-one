@@ -99,17 +99,35 @@ Contributions to expand language support are welcome!
 
 ## 📦 Build and Publish
 
-To build the project:
+### **To Build the Project**
+
+Run the following command to compile the project:
 
 ```
 npm run build
 ```
 
-To publish a new version:
+---
 
-1. Bump the version in `package.json`.
-2. Create a new Git tag (e.g., `v1.1.0`).
-3. Push the tag to trigger the GitHub Actions workflow.
+### **To Publish a New Version**
+
+1. Run the release script:
+
+   ```
+   npm run release
+   ```
+
+   The script will:
+
+   - Prompt you to select the version bump type (`patch`, `minor`, or `major`).
+   - Prompt you to enter a changelog message for the release.
+   - Run linting, tests, and the build process to ensure everything is in order.
+   - Update the `package.json` and `package-lock.json` versions.
+   - Update the `CHANGELOG.md` with the provided message.
+   - Commit the changes and create a new Git tag (e.g., `v1.1.0`).
+   - Push the changes and the tag to the repository.
+
+2. The GitHub Actions workflow will automatically publish the new version to npm.
 
 ---
 
