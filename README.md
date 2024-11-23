@@ -4,6 +4,7 @@
 [![Build Status](https://github.com/Vuka951/nine-five-one/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/Vuka951/nine-five-one/actions)
 
 The ultimate package that handles anything and everything related to the sacred number **951**.
+The main goal of this package is to serve as a good example of package set up and also as a realized meme package i said i would make at work.
 
 ---
 
