@@ -11,6 +11,7 @@ The main goal of this package is to serve as a good example of package set up an
 ## 🛠 Features
 
 - Check if a value is the number **951** or its equivalent in various formats.
+- Retrieve the value **951** in various formats.
 - Supports **951** in numeric, string, and even spelled-out forms (e.g., `"Nine Five One"`).
 - Multilingual support (e.g., `"devětpětjedna"` for Czech).
 - Flexible options for type and language filtering.
@@ -34,16 +35,19 @@ Here’s how to use the **nine-five-one** package:
 ### Basic Example
 
 ```
-const { isNineFiveOne, is951 } = require('nine-five-one');
+const { isNineFiveOne, getNineFiveOne } = require('nine-five-one');
 
+// isNineFiveOne
 console.log(isNineFiveOne(951)); // true
 console.log(isNineFiveOne("Nine Five One")); // true
-console.log(isNineFiveOne("devětpětjedna", { language: "czech" })); // true
+
+// getNineFiveOne
+console.log(getNineFiveOne()); // 951
 ```
 
-### Options
+### Options for `isNineFiveOne` Functions
 
-You can pass options to customize the behavior:
+You can pass options to customize the behavior of `isNineFiveOne` and `is951`:
 
 - **`type`**: Specify whether to check only `string`, `number`, or `any` (default: `any`).
 - **`language`**: Specify the language to use for spellings (default: `all`).
@@ -51,16 +55,37 @@ You can pass options to customize the behavior:
 Example:
 
 ```
+const { isNineFiveOne } = require('nine-five-one');
+
 console.log(isNineFiveOne(951, { type: "string" })); // false
-console.log(isNineFiveOne("Nine Five One", { language: "eng" })); // true
+console.log(isNineFiveOne("Nine Five One", { language: "english" })); // true
+```
+
+### Options for `getNineFiveOne` Functions
+
+You can pass options to customize the behavior of `getNineFiveOne` and `get951`:
+
+- **`type`**: Specify the format of the returned value (`number`, `string`, or `spelled`) (default: `number`).
+- **`language`**: Specify the language to use for spellings when `type` is `spelled` (default: `english`).
+
+Example:
+
+```
+const { getNineFiveOne } = require('nine-five-one');
+
+console.log(getNineFiveOne({ type: 'string' })); // '951'
+console.log(getNineFiveOne({ type: 'spelled', language: 'english' })); // 'ninefiveone'
 ```
 
 ### Alias
 
-You can use the shorthand alias **is951**:
+You can use the shorthand alias **is951** and **get951**:
 
 ```
+import { is951, get951 } from 'nine-five-one';
+
 console.log(is951(951)); // true
+console.log(get951({ type: 'string' })); // '951'
 ```
 
 ---

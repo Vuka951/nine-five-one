@@ -1,5 +1,5 @@
 const SPELLINGS: Record<string, string> = {
-  eng: 'ninefiveone',
+  english: 'ninefiveone',
   czech: 'devětpětjedna',
 };
 
