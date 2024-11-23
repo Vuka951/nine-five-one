@@ -33,7 +33,7 @@ function updateChangelog(version, message) {
   const changelogContent = fs.readFileSync(changelogPath, 'utf-8');
   const releaseDate = new Date().toISOString().split('T')[0];
 
-  const newChangelogEntry = `## [${version}] - ${releaseDate}\n### Added\n- ${message}\n\n`;
+  const newChangelogEntry = `## [${version}] - ${releaseDate}\n### Added\n- ${message}`;
 
   const updatedContent = changelogContent.replace(
     '## [Unreleased]',
